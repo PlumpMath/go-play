@@ -2,6 +2,9 @@
   (:use [maya.core])
   (:require [clojure.core.async :refer [chan go alt! >! <! <!!]]))
 
+;; A port of:
+;; https://golang.org/doc/play/pi.go
+
 (defn term [k]
   (maya -1 Math/pow k * 4 :as num,
          k * 2 + 1 :as denom,
@@ -16,4 +19,4 @@
       (swap! f + (<!! (go (<! ch)))))
     @f))
 
-(pi 10000)
+(pi 5000)

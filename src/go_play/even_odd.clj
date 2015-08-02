@@ -1,6 +1,9 @@
 (ns go-play.even-odd
   (:require [clojure.core.async :refer [chan go alt! >!]]))
 
+;; First encounter with core.async:
+;; http://pizzaforthought.blogspot.in/2015/08/go-play.html
+
 (def even (chan))
 (def odd  (chan))
 

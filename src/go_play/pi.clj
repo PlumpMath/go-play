@@ -1,6 +1,6 @@
 (ns go-play.pi
   (:use [maya.core])
-  (:require [clojure.core.async :refer [chan go alt! >! <! <!!]]))
+  (:require [clojure.core.async :refer [chan go >! <! <!!]]))
 
 ;; A port of:
 ;; https://golang.org/doc/play/pi.go
